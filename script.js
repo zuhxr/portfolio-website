@@ -109,10 +109,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add loading animation to images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-            this.style.transform = 'scale(1)';
-        });
+        // Check if image is already loaded
+        if (img.complete) {
+            img.style.opacity = '1';
+            img.style.transform = 'scale(1)';
+        } else {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
+            img.addEventListener('error', function() {
+                // If image fails to load, still show it
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
+        }
         img.style.opacity = '0';
         img.style.transform = 'scale(0.95)';
         img.style.transition = 'all 0.3s ease-out';
