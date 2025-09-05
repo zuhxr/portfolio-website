@@ -109,6 +109,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add loading animation to images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
+        // Skip university logo from animation to ensure it always shows
+        if (img.src.includes('university_of_debrecen_alumni_logo')) {
+            img.style.opacity = '1';
+            img.style.transform = 'scale(1)';
+            return;
+        }
+        
         // Check if image is already loaded
         if (img.complete) {
             img.style.opacity = '1';

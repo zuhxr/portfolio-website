@@ -95,6 +95,41 @@ body {
     transition: width 1s ease;
 }
 
+/* Programming Languages */
+.programming-languages {
+    margin-top: 2rem;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.language-item:last-child {
+    border-bottom: none;
+}
+
+.language-item:hover {
+    background-color: #f8f9fa;
+    padding-left: 1rem;
+    border-radius: 5px;
+}
+
+.language-item i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    width: 30px;
+}
+
+.language-item span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
 /* Projects Section */
 .card {
     border: none;
@@ -108,6 +143,19 @@ body {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Certificates */
+.certificate-card .card-title {
+    font-size: 1.1rem;
+}
+
+.certificate-card i {
+    font-size: 1.25rem;
+}
+
+.certificate-card .btn {
+    border-radius: 8px;
 }
 
 .card-body {
