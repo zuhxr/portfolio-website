@@ -250,6 +250,11 @@ body {
     margin-bottom: 0;
 }
 
+/* Ensure consistent spacing between academic entries (BSc and MSc) */
+#academics .col-md-10:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
 /* Favorites Section */
 .favorite-card {
     background: white;
